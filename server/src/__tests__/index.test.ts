@@ -32,7 +32,7 @@ describe('Voice Agent Server', () => {
 
   beforeAll(async () => {
     // Import the server after setting up mocks
-    const { default: app } = await import('../index');
+    const { default: app } = await import('../../../index');
     server = app;
   });
 
