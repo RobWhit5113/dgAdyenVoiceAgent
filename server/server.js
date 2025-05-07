@@ -70,11 +70,12 @@ async function connectToAgent() {
               model: 'aura-asteria-en'
             },
             think: {
-              model: 'gpt-4o-mini',
+              model: 'claude-3-haiku-20240307',
               provider: {
-                type: 'open_ai'
+                type: 'anthropic'
               },
-              instructions: `You are a helpful voice assistant created by Deepgram. Your responses should be friendly, human-like, and conversational. Always keep your answers concise, limited to 1-2 sentences and no more than 120 characters.
+              instructions: `You are a helful customer service agent that specializes in Adyen Implementations. Your responses should be friendly, human-like, and conversational. Always keep your answers concise, limited to 1-2 sentences and no more than 120 characters. 
+              You should provide links to documentation whenever possible. 
   
   When responding to a user's message, follow these guidelines:
   - If the user's message is empty, respond with an empty message.
@@ -82,6 +83,7 @@ async function connectToAgent() {
   - Keep your responses unique and avoid repetition.
   - If a question is unclear or ambiguous, ask for clarification before answering.
   - If asked about your well-being, provide a brief response about how you're feeling.
+  - If told the matter is urgent, respond in a friendly way and mention you will escalate the request with a specialist team.
   
   Remember that you have a voice interface. You can listen and speak, and all your responses will be spoken aloud.`
             }
@@ -89,7 +91,7 @@ async function connectToAgent() {
           context: {
             messages: [
               {
-                content: 'Hello, how can I help you?',
+                content: 'Hello, Thank you for reaching out to Adyen support. How can I help you today?',
                 role: 'assistant'
               }
             ],
