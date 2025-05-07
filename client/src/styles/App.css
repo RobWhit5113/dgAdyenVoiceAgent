@@ -1,0 +1,93 @@
+/* src/styles/App.css */
+:root {
+    --primary-color: #0076d6;
+    --primary-dark: #005bb8;
+    --primary-light: #e0f3ff;
+    --secondary-color: #4a4a4a;
+    --text-color: #333;
+    --bg-color: #f9f9f9;
+    --border-color: #ddd;
+    --error-color: #e53935;
+    --success-color: #43a047;
+  }
+  
+  * {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+  
+  body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    color: var(--text-color);
+    background-color: var(--bg-color);
+  }
+  
+  .App {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+  }
+  
+  .App-header {
+    background-color: var(--primary-color);
+    color: white;
+    padding: 1.5rem 2rem;
+    text-align: center;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+  
+  .App-header h1 {
+    font-size: 2rem;
+    margin-bottom: 0.5rem;
+  }
+  
+  .App-header p {
+    font-size: 1rem;
+    opacity: 0.9;
+  }
+  
+  .App-main {
+    flex: 1;
+    padding: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+    width: 100%;
+  }
+  
+  .connection-status {
+    margin-top: 1rem;
+    padding: 0.5rem 1rem;
+    background-color: var(--primary-light);
+    border-radius: 4px;
+    text-align: center;
+    font-weight: bold;
+  }
+  
+  .App-footer {
+    background-color: var(--secondary-color);
+    color: white;
+    text-align: center;
+    padding: 1rem;
+    margin-top: 2rem;
+  }
+  
+  .App-footer p {
+    font-size: 0.9rem;
+    opacity: 0.8;
+  }
+  
+  @media (max-width: 768px) {
+    .App-header {
+      padding: 1rem;
+    }
+    
+    .App-header h1 {
+      font-size: 1.6rem;
+    }
+    
+    .App-main {
+      padding: 1rem;
+    }
+  }
